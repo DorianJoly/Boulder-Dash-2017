@@ -1,9 +1,12 @@
+package PacNum2;
 
-public final class Sortie { /* aidé par wikipédia pattern matching singleton */
-
+public final class Sortie implements Element{
+	private boolean peutTombe=false;
+	private boolean tombe=false;
+	private char type='X';
+	
 	private static volatile Sortie instance = null;
-	private char type = 'X';
-
+	
 	private Sortie() {
 		super();
 	}
@@ -24,4 +27,5 @@ public final class Sortie { /* aidé par wikipédia pattern matching singleton */
 		s += type;
 		return s;
 	}
+
 }

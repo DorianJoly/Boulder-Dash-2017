@@ -1,11 +1,12 @@
+package PacNum2;
 
-public final class MurTitane { /*
-								 * aidé par wikipédia pattern matching singleton
-								 */
-
+public final class MurTitane implements Element {
+	private boolean peutTombe=false;
+	private boolean tombe=false;
+	private char type='W';
+	
 	private static volatile MurTitane instance = null;
-	private char type = 'W';
-
+	
 	private MurTitane() {
 		super();
 	}
@@ -26,4 +27,5 @@ public final class MurTitane { /*
 		s += type;
 		return s;
 	}
+
 }

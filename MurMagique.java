@@ -1,11 +1,12 @@
+package PacNum2;
 
-public final class MurMagique { /*
-								 * aidé par wikipédia pattern matching singleton
-								 */
-
+public final class MurMagique implements Element{
+	private boolean peutTombe=false;
+	private boolean tombe=false;
+	private char type='M';
+	
 	private static volatile MurMagique instance = null;
-	private char type = 'M';
-
+	
 	private MurMagique() {
 		super();
 	}
@@ -21,10 +22,10 @@ public final class MurMagique { /*
 		return MurMagique.instance;
 	}
 
-	
 	public String toString() {
 		String s = "";
 		s += type;
 		return s;
 	}
+
 }

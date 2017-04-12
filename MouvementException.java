@@ -1,3 +1,5 @@
+package PacNum2;
+
 
 public class MouvementException extends Exception {
 

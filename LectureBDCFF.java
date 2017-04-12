@@ -1,3 +1,5 @@
+package PacNum2;
+
 
 import java.io.*;
 import java.util.ArrayList;
@@ -6,8 +8,8 @@ import java.util.Scanner;
 public class LectureBDCFF {
 
 	// TEST
-	public static void main(String[] args) {
-		String NomFichier = "C:\\Users\\wargl\\Desktop\\workspace projet\\BoulderDashProjet\\test0.txt";
+	public Niveau lecture(String nom) {
+		String NomFichier = "C:\\Users\\Corentin\\workspace\\Boulder_Dash_2016-2017" + nom;
 
 		char[][] tab;
 		ArrayList<ArrayList> tempo = new ArrayList<ArrayList>();
@@ -81,11 +83,14 @@ public class LectureBDCFF {
 			/* System.out.println(carte); */
 			Niveau init = new Niveau(name, caveDelay, caveTime, diamondsRequired, primaryDiamondValue,
 					secondaryDiamondValue, amoebaTime, magicWallTime, carte);
+			return init;
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
-		} catch (CarteInvalideException e) {
+		} catch (CarteInvalidException e) {
 			System.out.println(e.getMessage());
 		}
+		int u = 2 / 0; // faire une erreur
+		return null;
 
 	}
 }

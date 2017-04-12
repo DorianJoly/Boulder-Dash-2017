@@ -1,10 +1,31 @@
+package PacNum2;
 
-public class Mur {
+public final class Mur implements Element{
+	private boolean peutTombe=false;
+	private boolean tombe=false;
+	private char type='w';
+	
+	private static volatile Mur instance = null;
+	
+	private Mur() {
+		super();
+	}
 
-	private Objet o; /* pas d'héritage */
+	public final static Mur getInstance() {
+		if (Mur.instance == null) {
+			synchronized (Mur.class) {
+				if (Mur.instance == null) {
+					Mur.instance = new Mur();
+				}
+			}
+		}
+		return Mur.instance;
+	}
 
-	public Mur() { /* pas de new ! singleton */
-
+	public String toString() {
+		String s = "";
+		s += type;
+		return s;
 	}
 
 }
